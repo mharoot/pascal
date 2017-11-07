@@ -25,10 +25,17 @@ begin
  // writeln(Lakes [Ontario, area]:20:2);
  // writeln;
   
+  writeln('Lake' :9, 'Area' :9, '':15,'Elevation');
   for GL := Erie to Superior do
     begin
-      writeln(LakeNames[GL] :9, ': ' ,Lakes [GL, area]:20:2);
-  end;
+        writeln(LakeNames[GL] :9, ': ');// ,Lakes [GL, area]:20:2);
+        for LP := area to elevation do
+        begin
+            write(' ',Lakes [GL, LP] :20:2)
+        end;
+        writeln;
+      
+    end;
   
 end.
 
